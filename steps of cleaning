@@ -1,0 +1,51 @@
+Pre-Processing Document 
+
+
+Step 1 - Filtering out of Keywords 
+
+
+Keywords like POST, Village,etc can misguide the geocoder, so we use FIND & REPLACE in WPS Office/Excel to replace these words with blanks. 
+
+
+Step 2 - Correct state column 
+
+
+Run a pivot table on the state column to check for short forms or wrong spellings of States 
+
+
+
+Step 3 - Remove #NAME 
+
+
+
+#NAME appears when a formula is applied to a blank record. Use FIND & REPLACE to remove it. 
+
+
+Step 4 - Convert to text to avoid date formats 
+
+
+Formatting cells to avoid numbers converted to dates after find & replace. 
+
+
+Step 5 - use substitute formula for removing special characters  
+
+
+Find & replace cannot remove special characters.  
+
+=SUBSTITUTE(D2,"~","") 
+
+
+
+Using the above formula to remove special characters 
+
+
+
+ 
+
+
+
+Step 6 - pincode length check to make sure its a 6 digit number 
+
+
+
+Use formula LEN() to check the number of characters in the pincode column. 6 digit numbers are acceptable, others will be erroneous and hence discarded.
